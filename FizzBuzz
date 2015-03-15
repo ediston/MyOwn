@@ -6,6 +6,7 @@
 // else divisible by 3 then only multiples of 5 <=20 (because remainder will be max 4)
 // else divisible by 5 then only multiples of 3 <=6  (because remainder will be max 2)
 // else print number
+// UPDATE: EVEN better soln down
 #include<iostream>
 using namespace std;
 
@@ -29,3 +30,27 @@ int main(){
     }
     return 0;
 }
+///----- only 1 mode
+
+int main(){
+    for(int i=1; i<=100; i++){
+        switch((i%15)){
+            case 0:
+                cout << "FizzBuz";
+                break;
+            case 3: case 6: case 9: case 12:
+                cout << "Fizz";
+                break;
+            case 5: case 10:
+                cout << "Buzz";
+                break;
+            default:
+                cout << i;
+                break;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
