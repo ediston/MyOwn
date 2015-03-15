@@ -1,0 +1,31 @@
+//Fizz Buzz with least mod and no extra memory
+// also this might be faster because of switch
+// May be there is a better soln. 
+// Idea is simple 
+// if divisible by both sum must be 0
+// else divisible by 3 then only multiples of 5 <=20 (because remainder will be max 4)
+// else divisible by 5 then only multiples of 3 <=6  (because remainder will be max 2)
+// else print number
+#include<iostream>
+using namespace std;
+
+int main(){
+    for(int i=1; i<=100; i++){
+        switch((i%3)*3 + (i%5)*5){
+            case 0:
+                cout << "FizzBuz";
+                break;
+            case 5: case 10: case 15: case 20:
+                cout << "Fizz";
+                break;
+            case 3: case 6:
+                cout << "Buzz";
+                break;
+            default:
+                cout << i;
+                break;
+        }
+        cout << endl;
+    }
+    return 0;
+}
