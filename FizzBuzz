@@ -27,6 +27,7 @@ int main(){
                 break;
         }
         cout << endl;
+        // some comment
     }
     return 0;
 }
